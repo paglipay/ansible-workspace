@@ -1,0 +1,31 @@
+---
+- name: "ansible"
+  apt: pkg=ansible state=present
+
+- name: "python-pip"
+  apt: pkg=python-pip state=present
+
+- name: "python3-pip"
+  apt: pkg=python3-pip state=present
+  
+- name: Install Apt List
+  apt: name={{ item }} state=latest update_cache=yes
+  with_items:
+    - sshpass
+    - samba
+    - default-jdk
+    - nfs-kernel-server
+
+- name: Install pywinrm Module for Python
+  pip:
+    name: pywinrm
+ 
+  
+- name: Install PIP3 List
+  pip: name={{ item }}
+  with_items:
+    - flask
+    - paramiko
+    - selenium
+    - Flask-SQLAlchemy
+    - pyopenssl

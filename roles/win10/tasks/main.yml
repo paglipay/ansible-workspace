@@ -1,0 +1,382 @@
+# - name: run ipconfig
+  # raw: ipconfig
+  # register: ipconfig
+# - debug: var=ipconfig
+
+# - name: install and pin Notepad++ at 7.6.3
+  # win_chocolatey:
+    # name: notepadplusplus
+    # version: 7.6.3
+    # pinned: yes
+    # state: present
+
+# - name: uninstall multiple packages
+  # win_chocolatey:
+    # name: '{{ item }}'
+    # state: absent
+  # with_items:
+
+- name: Install multiple packages
+  win_chocolatey:
+    name: '{{ item }}'
+    state: present
+  with_items:
+  
+  
+  # - pscx
+  # - windirstat
+  - googlechrome
+  # - vlc
+  # - winrar
+  # - 7zip
+  # - git
+  # - putty
+  - pycharm-community
+  # - rufus
+  # - tightvnc
+  - nmap
+  # - vnc-viewer
+  # - selenium-chrome-driver
+  # - selenium-ie-
+  # - python3
+  # - keepass
+  - virtualbox
+  - vagrant
+  # - openoffice
+  # - blender
+  - jenkins
+  # - rdcman
+  # - arduino
+  # - sketchup
+  # - kodi
+  # - miniconda3
+  # - microsoft-windows-terminal
+  # - kindle
+  # - spark
+  # - clover
+  # - rocketchat
+  # - recuva
+  # - wiztree
+  # - crashplan
+  # - alldup
+  # - keepass-rpc
+  # - snagit
+  - superputty
+  # - minecraft
+  # - perfview
+  # - cloneapp
+  # - windows-adk
+  # - scansnapmanager
+  # - qap
+  # - ums
+  # - cameyo
+  # - keepass-classic
+  # - steam
+  # - origin
+  # - goggalaxy
+  # - retroarch
+  # - pcsx2
+  # - railroadtycoon
+  # - widelands
+  # - consoleclassix
+  # - angry-birds-star-wars
+  # - mupen64plus
+  # - pencil
+  # - stexbar
+  # - jre8
+  # - autohotkey
+  # - libreoffice-fresh
+  # - bazel
+  # - autoit.commandline
+  # - autoit
+  # - duckietv
+  # - pia
+  # - openra
+  - grammarly
+  # - ethanbrown.sublimetext2.webpackages
+  - plexmediaplayer
+  - ntlite-free
+  # - windows-adk-winpe
+  # - jhipster
+  - ie9
+  # - caffeine
+  # - windowsessentials
+  # - drawpile
+  # - ipscan
+  # - aquasnap
+  - tftpd32
+  # - teamviewer8
+  # - taskcoach
+  # - uninstalltool
+  # - veyon
+  # - songr
+  # - mousewithoutborders
+  # - gnucash
+  # - freecad
+  # - advanced-ip-scanner
+  # - kubernetes-node
+  # - microsoft-office-deployment
+  # - networkmonitor
+  
+  
+  #- malwarebytes
+  #- pdfcreator
+  #- anaconda2
+  - anaconda3
+  #- awscli
+  #- vscode
+  #- pycharm-community
+  #- microsoft-teams.install
+  #- kubernetes-cli
+  #- slack
+  #- pgadmin3
+  #- mysql.workbench
+  #- activeperl
+  #- docker-desktop
+  #- windows-sdk-7.1
+  #- whatsapp
+  #- windows-sdk-7.1
+  #- jenkins-x
+  #- mongodb.install
+  #- ultravnc
+  #- chefdk
+  #- rsat
+  #- kitty
+  #- utorrent
+  #- unity
+  #- mbca
+  #- googlechrome-allusers
+  #- autoit.commandline
+  #- chromedriver
+  #- filezilla.server
+  #- docker-machine
+  #- virtualclonedrive
+  #- combofix
+  #- intellijidea-ultimate
+  #- pgadmin4
+  #- avgantivirusfree
+  #- p4v
+  #- freefilesync
+  #- github-desktop
+  #- emacs
+  #- filezilla
+  #- teamcity
+  #- teamspeak
+  #- docker-cli
+  #- ossec-agent
+  #- desktopok
+  #- windowsrepair
+  #- pdfsam
+  #- sudo
+  #- windows-10-update-assistant
+  #- elasticsearch
+  #- cake.portable
+  #- grepwin
+  #- nginx
+  #- bulk-crap-uninstaller
+  #- xmind
+  #- soapui
+  #- bleachbit
+  #- microsip
+  #- jitsi
+  #- clamwin
+  #- vmwareworkstation
+  #- hwmonitor
+  #- opencv
+  #- plexmediaserver
+  #- rdm
+  #- ccleaner.portable
+  #- spystudio
+  #- dukto
+  #- skypeforbusiness
+  #- superantispyware
+  #- fileshredder
+  #- iperf3
+  #- adblockplusfirefox
+  #- firefox
+  #- stellarium
+  #- visualstudiocommunity2013
+  #- jrt
+  #- docker-toolbox
+  #- patch-my-pc
+  #- freemind
+  #- selenium
+  #- onenote
+  #- apache-httpd
+  #- chocolatey.server
+  #- boxstarter.testrunner
+  #- scribus
+  #- adexplorer
+  #- avidemux
+  #- icloud
+  #- ditto.install
+  #- dopdf
+  #- lhaplus
+  #- clipgrab
+  #- python.pypy
+  #- agentransack
+  #- abc-update
+  #- cpu-z.portable
+  #- gitlab-runner
+  #- mumble
+  #- vault
+  #- epicgameslauncher
+  #- freedownloadmanager
+  #- veeam-agent
+  #- ruby.portable
+  #- docker-kitematic
+  #- kcleaner
+  #- astrogrep
+  #- cheatengine
+  #- diffmerge
+  #- emdb
+  #- electrum
+  #- graphicsmagick
+  #- avirafreeantivirus
+  #- bitnami-xampp
+  #- passwordsafe
+  #- vb5runtime
+  #- selenium-opera-driver
+  #- selenium-edge-driver
+  #- rclone
+  #- displayfusion
+  #- disabledefender-winconfig
+  #- terminus
+  #- bitwarden
+  #- keepassx
+  #- visioviewer
+  #- wps-office-free
+  #- librecad
+  #- selenium-all-drivers
+  #- airdroid
+  #- transmission
+  #- kubernetes-kompose
+  #- treesizefree.portable
+  #- openjdk11
+  #- ghidra
+  #- trillian
+  #- avginternetsecurity
+  #- conan
+  #- leagueoflegends
+  #- voicebot
+  #- makehuman
+  #- doom-d64rtr
+  #- qc-doom-edition
+  #- office365homepremium
+  #- javaruntime
+  #- jdk8
+  #- javaruntime-platformspecific
+  #- nodejs.install
+  #- java.jdk
+  #- nodejs
+  #- eclipse
+  #- jdk11
+  #- puppet
+  #- carbon
+  #- processhacker
+  #- webdeploy
+  #- sourcetree
+  #- dotnet4.0
+  #- poweriso
+  #- remy
+  ##- ironpython
+  #- rundeck
+  #- cloudberryexplorer.amazons3
+  #- captura
+  #- mediathekview
+  #- bitcoin.install
+  #- bitcoin
+  #- emulationstation.install
+  #- wasp
+  #- tcpview
+  #- wnetwatcher.install
+  #- wnetwatcher
+  #- balsamiqmockups3
+  #- darktable
+  #- realvnc
+  #- tigervnc
+  #- realtek-hd-audio-driver
+  #- cmsupportcenter
+  #- tv-browser
+  #- qtcreator
+  #- pdfill
+  #- easybcd
+  #- araxismerge
+  #- wsl-ubuntu-1804
+  #- livestreamer
+  #- whois
+  #- csvfileview
+  #- simple-sticky-notes
+  #- outlookattachview
+  #- automise
+  #- fritzing
+  #- avidemux
+  #- skaffold
+  #- sccmtoolkit
+  #- lightworks
+  #- wunderlist
+  #- deezer
+  #- freemake-video-converter
+  #- wakemeonlan
+  #- katmouse
+  #- rdmagent
+  #- capture2text
+  #- authy-desktop
+  #- zimbra-desktop
+  #- folderchangesview
+  #- ultramon
+  #- clonespy
+  #- kingsoft-office-free
+  #- python.cheetah
+  #- camstudio
+  #- aws-iam-authenticator
+  #- windows-sdk-10
+  #- orionsdk
+  #- skypeforbusinessbasic
+  #- camtasia
+  #- mdt
+  #- rocketdock
+  #- sccmclictr
+  #- teamviewer9
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+  #- skaffold
+    
+#googlechrome, vlc
+
+# 7-Zip exe doesn't use a guid for the Product ID
+# - name: Install 7zip from a network share specifying the credentials
+  # win_package:
+    # path: \\domain\programs\7z.exe
+    # product_id: 7-Zip
+    # arguments: /S
+    # state: present
+    # user_name: DOMAIN\User
+    # user_password: Password
+
+# - name: Install Anaconda 3 with list of arguments instead of a string.
+  # win_package:
+    # path: https://repo.anaconda.com/archive/Anaconda3-2019.07-Windows-x86_64.exe
+    # product_id: '{56edfc7280fb8def19922a0296b45633}'
+    # arguments:
+    # - /install
+    # - /passive
+    # - /norestart
