@@ -1,0 +1,3 @@
+# Default variables for role2
+role2_variable1: "default value"
+role2_variable2: 123
